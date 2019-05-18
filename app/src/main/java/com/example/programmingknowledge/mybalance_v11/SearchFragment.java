@@ -1,5 +1,6 @@
 package com.example.programmingknowledge.mybalance_v11;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -14,5 +15,11 @@ public class SearchFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_search,container,false);
 
+    }
+
+    public void MoveToBalanceList(View view){
+        Intent intent = new Intent();
+        intent.setClass(getActivity(), BalanceListActivity.class);
+        startActivity(intent);
     }
 }
